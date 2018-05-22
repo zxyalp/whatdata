@@ -12,7 +12,8 @@ def hello_world():
 
 @app.route('/user/<name>')
 def user(name):
-    return render_template('user.html', name=name)
+    comments = list('qwertyuighgj')
+    return render_template('user.html',comments=comments, user=True, name=name)
 
 
 if __name__ == '__main__':
