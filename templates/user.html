@@ -1,18 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>user page</title>
-</head>
-<body>
-    {% if user %}
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %} demo  {% endblock %}
+
+{% block page_content %}
+
+<div class="page-header">
     <h1>Hello, {{ name }}</h1>
-    {% else %}
-        <h1>hello Stranger</h1>
-    {% endif %}
 
-    {% include 'common.html' %}
+</div>
+{{ wtf.quick_form(form) }}
 
 
-</body>
-</html>
+{% endblock %}
