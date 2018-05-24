@@ -16,7 +16,6 @@ def hello_world():
     if form.validate_on_submit():
         name = form.name.data
         form.name.data = ''
-
     return render_template('index.html', current_time=datetime.utcnow(), form=form, name=name)
 
 
